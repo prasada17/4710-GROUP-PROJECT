@@ -2,15 +2,15 @@
 
 // Hides tab below the given number, unhides tab of the given number.
 function switchtab(number) {
-    let element = document.getElementById("tab-container" + (number-1).toString());
-    let element2 = document.getElementById("t" + (number-1).toString());
-    element.classList.add("hidden");
-    element2.classList.remove("active");
 
-    element = document.getElementById("tab-container" + number.toString());
-    element2 = document.getElementById("t" + number.toString());
-    element.classList.remove("hidden");
-    element2.classList.add("active");
+    for (let i = 0; i < 5; i++) {
+        let element = document.getElementById("tab-container" + i.toString());
+        if (number == i) {
+            element.classList.remove("hidden");
+        } else {
+            element.classList.add("hidden");
+        }
+    }
 
 }
 
