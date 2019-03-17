@@ -1,5 +1,7 @@
 # 4710-HW-5
 
+Group members: Aanil Prasad, John Cordova, Ryan McClellan, David Palmieri
+
 Apply a student Github account: https://education.github.com/pack
 
 Implement the frontend based on this prototype video: https://drive.google.com/file/d/1WeGgXwem7L53J7RY5BXpMr2Ptk1ce6CZ/view
