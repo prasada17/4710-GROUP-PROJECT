@@ -107,7 +107,22 @@
 
 <!--RUN TESTS TAB START-->
 <div class="container hidden" id="tab-container3">
-    <p>Nothing to see here yet.</p>
+    <div class="jumbotron" id="">
+        <div class="row">
+            <div class="hidden" id = "ProgressBarHolder">
+                <h1 style =  "text-align: center"> Running Tests </h1><br><br>
+                <div id="ProgressBar" class="pbar" style="width:1%">1%</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm5"></div>
+            <div class="col-sm2" style =  "text-align: center">
+                <button type="button" class="btn btn-success" id = "RunTest" onclick="RunTests();">Run Test</button>
+            </div>
+            <div class="col-sm5"></div>
+        </div>
+    </div>
+
 </div>
 <!--RUN TESTS TAB END-->
 
