@@ -1,29 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>HydroQ</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-        function relocate_home()
-        {
-            location.href = "www.google.com";
-        }
-    </script>
-
 </head>
+
+
 <body>
 
-
+<!--LOGO AND NAV BAR(breadcrumb) START-->
 <div class="row">
     <div class="col-md-12">
         <p class="text-large" id="logo"> HYDROQUALITY </p>
@@ -33,19 +27,20 @@
 <div class="row" id="tabsbg">
     <div id="tabs">
         <ul class="nav nav-tabs">
-            <li id=upload class="active"><a href="#"><h3>Upload</h3></a></li>
-            <li class=""><a href="#"><h3>Verify</h3></a></li>
-            <li><a href="#"><h3>Configure</h3></a></li>
-            <li><a href="#"><h3>Run Tests</h3></a></li>
-            <li><a href="#"><h3>Review</h3></a></li>
+            <li id="t0" class="active"><a href="#"><h3>Upload</h3></a></li>
+            <li id="t1"><a href="#"><h3>Verify</h3></a></li>
+            <li id="t2"><a href="#"><h3>Configure</h3></a></li>
+            <li id="t3"><a href="#"><h3>Run Tests</h3></a></li>
+            <li id="t4"><a href="#"><h3>Review</h3></a></li>
         </ul>
     </div>
 </div>
+<!--LOGO AND NAV BAR(breadcrumb) END-->
 
 <br>
 
 <!--UPLOAD TAB START-->
-<div class="container" id="uploadcont">
+<div class="container" id="tab-container0">
 
     <div class="row">
         <div class="col-sm-12" id="test">
@@ -55,10 +50,6 @@
                 Blah blah blah blah. Blabob Blah Bla Bla.
                 Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
                 Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
-                Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla
-                Bla.Blah blah blaaah. Blah blah blah blah.
-                Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
-                Blah blah blah blah. Blabob Blah Bla Bla.
             </p>
         </div>
     </div>
@@ -66,28 +57,100 @@
     <br>
 
     <div class="container">
-        <div class="jumbotron" id="filebutton">
-            <h1 id="test"> File Here</h1>
+        <div class="jumbotron" id="filedrop">
+            <div>
+                <span class="glyphicon glyphicon-cloud-upload"></span>
+                <h2 id="test"> DRAG AND DROP A .CSV FILE INTO THIS SQUARE</h2>
+            </div>
         </div>
     </div>
 
     <div class="container">
         <div class="col-sm-6">
-            <div class="container">
+            <div class="container btn" data-toggle="modal" data-target="#exampleModalCenter">
                 <div class="jumbotron" id="selectbutton">
-                    <h3 id="test">Select Files</h3>
+                    <span class="glyphicon glyphicon-folder-open"></span>
+                    <h3 id="test">SELECT A .CSV FILE</h3>
                 </div>
             </div>
         </div>
         <div class="col-sm-6">
             <div class="container">
-                <div class="jumbotron" id="continuebutton" onclick=" relocate_home()">
+                <div class="jumbotron inactive" id="continuebutton" onclick="switchtab(1)">
                     <h3 id="test">Continue</h3>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!--UPLOAD TAB END-->
+
+
+<!--VERIFY TAB START-->
+<div class="container hidden" id="tab-container1">
+    <p>Nothing to see here yet.</p>
+</div>
+<!--VERIFY TAB END-->
 
 </body>
+
+<!-- MODAL START -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- This means this is a bootstrap modal -->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" id="test">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Select a file from your hard disk</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- ARIA (Accessible Rich Internet Applications) defines a way to make Web content and Web applications more accessible to people with disabilities. -->
+                    <!-- The aria-hidden property tells screen-readers if they should ignore the element. -->
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input id="uploadinput" name="fileToUpload[]" oninput="loading();" type="file" multiple/>
+                <!--<button type="submit">Upload</button>-->
+                <div id="load" class="hidden"><img src="loading.gif" alt="Loading Gif" style="max-width: 50%;"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="unload();showtable();contbutton();">Do Something</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--MODAL END-->
+
+<!-- DEMO TABLE START-->
+<div class="container hidden">
+    <div class="jumbotron" id="filebutton">
+        <table class="table table-bordered" id="table">
+            <thead>
+            <tr>
+                <th>FILENAME</th>
+                <th>FILETYPE </th>
+                <th>SIZE</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Dry_Creek_010219</td>
+                <td>.xlsx</td>
+                <td>32MB</td>
+            </tr>
+            <tr>
+                <td>Wet_Creek_3459</td>
+                <td>.xlsx</td>
+                <td>19MB</td>
+            </tr>
+            <tr>
+                <td>23553010219</td>
+                <td>.xlsx</td>
+                <td>42MB</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- DEMO TABLE END-->
 </html>

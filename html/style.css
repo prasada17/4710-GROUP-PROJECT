@@ -2,7 +2,6 @@
 #logo {
     padding-top: 1%;
     padding-left: 5%;
-    padding-bottom: 2%;
     color: cadetblue;
 }
 
@@ -12,12 +11,16 @@
 
 
 #tabs {
-    padding-left: 5%;
+    padding-left: 10%;
     padding-right: 5%;
 }
 
 #tabsbg {
     background-color: darkgray;
+}
+
+#table {
+    background-color: white;
 }
 
 #test {
@@ -26,7 +29,15 @@
     text-align: center;
 }
 
-#filebutton {
+#test2 {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    color: white;
+}
+
+#filedrop {
+    text-align: center;
     height: 30%;
     background-color: cornsilk;
     border-style: dotted;
@@ -34,6 +45,7 @@
 }
 
 #selectbutton {
+    text-align: center;
     height: 30%;
     width: 40%;
     background-color: cornsilk;
@@ -46,6 +58,15 @@
     border-style: solid;
     border-color: black;
 }
+
+#continuebutton.inactive {
+    pointer-events: none;
+}
+
+#continuebutton.active {
+    background-color: darkgreen;
+}
+
 
 .nav-tabs {
     pointer-events: none;
