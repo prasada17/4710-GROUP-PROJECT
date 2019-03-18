@@ -15,7 +15,6 @@ function switchtab(number) {
     }
 }
 
-
 function loading() {
     let element = document.getElementById("load");
     element.classList.remove("hidden");
