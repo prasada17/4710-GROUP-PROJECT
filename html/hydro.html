@@ -286,7 +286,6 @@
                             <option>DataValue</option>
                             <option>UTCOffset</option>
                             <option>DateTimeUTC</option>
-
                         </select>
                         <br>
                         <button class="btn" onclick="contbutton(1);">Accept</button>
@@ -379,12 +378,142 @@
 <!--RUN TESTS TAB END-->
 
 
-<!--REVIEW TAB START-->
-<div class="container hidden" id="tab-container4">
-    <p>Nothing to see here yet.</p>
-</div>
-<!--REVIEW TAB END-->
+    <!--REVIEW TAB START-->
+    <div class="container hidden" id="tab-container4">
+        <div id="outland">
+            <div id="graphholder">
+                <div id="graphbox">
+                    <div id="header">
+                        <h1>DataValue1</h1>
+                    </div>
+                    <img src="chrome_2019-03-17_22-16-12.png" alt="graphpic">
+                </div>
 
+                <div id="prior">
+                    <div id=priorbox>
+                        <button type="button" class="btn btn-success" id = "priordata" onclick=""><- Prior Data Column</button>
+                    </div>
+                </div>
+                <div id="next">
+                    <div id=nextbox>
+                        <button type="button" class="btn btn-success" id = "nextdata" onclick="switchtab(5)">Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dataholder">
+                <div id="metadata">
+                    <h2>Graph Metadata</h2>
+                    <div id="metadatabox">
+                        <ul>
+                            <li><a>DateTime:</a></li>
+
+                            <li><a>Measurement:</a></li>
+
+                            <li><a>Flag Code:</a></li>
+
+                            <li><a>Flag Meaning:</a></li>
+
+                            <li><a>Date Flagged:</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dataholder2">
+                <div id="flaggeddata">
+                    <h2>Flagged Data</h2>
+                    <div id="flaggeddatabox">
+                        <table id="flaggeddatatable" class="table table-striped table-bordered tablesm" cellspacing="0" width="100%" id="datamodtable">
+                            <thead>
+
+                                <tr>
+                                    <th>DateTime</th>
+                                    <th>Value</th>
+                                    <th>QC Flag</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--REVIEW TAB END-->
+
+    <!--Hidden TAB START-->
+    <div class="container" id="tab-container5">
+
+        <div class="row">
+            <div class="col-sm-12" id="words">
+                <h1>Thanks for using the CAOSHI HYDROQUALITY client.</h1>
+                <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                    Blah blah blah blah. Blabob Blah Bla Bla.
+                    Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12" id="DownHold">
+                <button type="button" class="btn btn-success" id = "Down" onclick="">Download Quality Controlled Data</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12" id="ContUp">
+                <button type="button" class="btn btn-success" id = "ContUp" onclick="">Continue Uploading with CAOSHI </button>
+            </div>
+        </div>
+        <br>
+
+    </div>
+    <!--Hidden TAB END-->
 
 </body>
 
