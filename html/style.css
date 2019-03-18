@@ -51,11 +51,8 @@
 
 #detectedcolumns {
     text-align: left;
-    
     background: lightblue;
     border: 1px solid black;
-   
-    
 }
 
 #datetimecolumn {
@@ -64,8 +61,6 @@
     width: 400px;
     background: lightblue;
     border: 1px solid black;
-   
-    
 }
 
 #selectbutton {
@@ -101,7 +96,7 @@
     justify-content: left;
 }
 
-#configure {
+.configure {
     margin: auto ;
     background-color: lightblue;
     min-height: 400px;
@@ -109,6 +104,10 @@
 
 .nav-tabs {
     pointer-events: none;
+}
+
+#click {
+    pointer-events: auto;
 }
 
 .a {
@@ -129,6 +128,7 @@
     background-color: lightblue;
     border-color: black;
 }
+
 .nav-tabs > li.active > a {
     background-color: green !important;
     color: white !important;
