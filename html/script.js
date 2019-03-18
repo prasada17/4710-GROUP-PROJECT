@@ -13,6 +13,16 @@ function switchtab(number) {
             element2.classList.remove("active");
         }
     }
+
+    for (let i = 0; i < 5; i++) {
+        let element = document.getElementById("t" + i.toString());
+        if (number == 4){
+            element.classList.add("click");
+        }
+        else {
+            element.classList.remove("click");
+        }
+    }
 }
 
 function loading() {
