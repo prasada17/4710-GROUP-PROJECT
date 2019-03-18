@@ -77,18 +77,19 @@
     border-color: black;
 }
 
-#continuebutton {
+.continuebutton {
 
     width: 40%;
     border-style: solid;
     border-color: black;
 }
 
-#continuebutton.inactive {
+
+.continuebutton.inactive {
     pointer-events: none;
 }
 
-#continuebutton.active {
+.continuebutton.active {
     background-color: darkgreen;
 }
 
