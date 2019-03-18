@@ -51,6 +51,5 @@ function RunTests() {
             pBar.style.width = width + '%';
             pBar.innerHTML = width * 1  + '%';
         }
-
     }
 }

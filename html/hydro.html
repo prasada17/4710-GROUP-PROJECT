@@ -27,17 +27,12 @@
 <div class="row" id="tabsbg">
     <div id="tabs">
         <ul class="nav nav-tabs">
-            <li id="t0" class="active"><a href="#"><h3>Upload ></h3></a></li>
-            <li id="t1"><a href="#"><h3>Verify  ></h3></a></li>
-            <li id="t2"><a href="#"><h3>Configure ></h3></a></li>
-            <li id="t3"><a href="#"><h3>Run Tests  ></h3></a></li>
-            <li id="t4"><a href="#"><h3>Review  ></h3></a></li>
+            <li id="t0" class="active" onclick="switchtab(0)"><a href="#"><h3>Upload ></h3></a></li>
+            <li id="t1"><a href="#" onclick="switchtab(1)"><h3>Verify  ></h3></a></li>
+            <li id="t2"><a href="#" onclick="switchtab(2)"><h3>Configure ></h3></a></li>
+            <li id="t3"><a href="#" onclick="switchtab(3)"><h3>Run Tests  ></h3></a></li>
+            <li id="t4"><a href="#" onclick="switchtab(4)"><h3>Review  ></h3></a></li>
         </ul>
-        <div class="btn" onclick="switchtab(0);">0</div>
-        <div class="btn" onclick="switchtab(1);">1</div>
-        <div class="btn" onclick="switchtab(2);">2</div>
-        <div class="btn" onclick="switchtab(3);">3</div>
-        <div class="btn" onclick="switchtab(4);">4</div>
     </div>
 </div>
 <!--LOGO AND NAV BAR(breadcrumb) END-->
@@ -47,91 +42,124 @@
 <!--UPLOAD TAB START-->
 <div class="container" id="tab-container0">
 
-    <div class="row">
-        <div class="col-sm-12" id="test">
-            <h1>Welcome to CAOSHI HYDROQUALITY client.</h1>
-            <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
-                Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
-                Blah blah blah blah. Blabob Blah Bla Bla.
-                Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
-                Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
-            </p>
-        </div>
+                <div class="row">
+                    <div class="col-sm-12" id="test">
+                        <h1>Welcome to CAOSHI HYDROQUALITY client.</h1>
+                        <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                            Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                            Blah blah blah blah. Blabob Blah Bla Bla.
+                            Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                            Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="container">
+                    <div class="jumbotron" id="filedrop">
+                        <div>
+                            <span class="glyphicon glyphicon-cloud-upload"></span>
+                            <h2 id="test"> DRAG AND DROP A .CSV FILE INTO THIS SQUARE</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="col-sm-6">
+                        <div class="container btn" data-toggle="modal" data-target="#exampleModalCenter">
+                            <div class="jumbotron" id="selectbutton">
+                                <span class="glyphicon glyphicon-folder-open"></span>
+                                <h3 id="test">SELECT A .CSV FILE</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="container">
+                            <div class="jumbotron inactive" id="continuebutton" onclick="switchtab(1)">
+                                <h3 id="test">Continue</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
+    <!--UPLOAD TAB END-->
 
-    <br>
 
-    <div class="container">
-        <div class="jumbotron" id="filedrop">
-            <div>
-                <span class="glyphicon glyphicon-cloud-upload"></span>
-                <h2 id="test"> DRAG AND DROP A .CSV FILE INTO THIS SQUARE</h2>
-            </div>
-        </div>
+    <!--VERIFY TAB START-->
+    <div class="container hidden" id="tab-container1">
+        <p>Nothing to see here yet.</p>
     </div>
+    <!--VERIFY TAB END-->
 
-    <div class="container">
-        <div class="col-sm-6">
-            <div class="container btn" data-toggle="modal" data-target="#exampleModalCenter">
-                <div class="jumbotron" id="selectbutton">
-                    <span class="glyphicon glyphicon-folder-open"></span>
-                    <h3 id="test">SELECT A .CSV FILE</h3>
+
+    <!--CONFIGURE TAB START-->
+    <div class="container hidden" id="tab-container2">
+        <p>Nothing to see here yet.</p>
+    </div>
+    <!--CONFIGURE TAB END-->
+
+
+    <!--RUN TESTS TAB START-->
+    <div class="container hidden" id="tab-container3">
+        <div class="jumbotron" id="">
+            <div class="row">
+                <div class="hidden" id = "ProgressBarHolder">
+                    <h1 style =  "text-align: center"> Running Tests </h1><br><br>
+                    <div id="ProgressBar" class="pbar" style="width:1%">1%</div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="container">
-                <div class="jumbotron inactive" id="continuebutton" onclick="switchtab(1)">
-                    <h3 id="test">Continue</h3>
+            <div class="row">
+                <div class="col-sm5"></div>
+                <div class="col-sm2" style =  "text-align: center">
+                    <button type="button" class="btn btn-success" id = "RunTest" onclick="RunTests();">Run Test</button>
                 </div>
+                <div class="col-sm5"></div>
             </div>
         </div>
+
     </div>
-</div>
-<!--UPLOAD TAB END-->
+    <!--RUN TESTS TAB END-->
 
 
-<!--VERIFY TAB START-->
-<div class="container hidden" id="tab-container1">
-    <p>Nothing to see here yet.</p>
-</div>
-<!--VERIFY TAB END-->
-
-
-<!--CONFIGURE TAB START-->
-<div class="container hidden" id="tab-container2">
-    <p>Nothing to see here yet.</p>
-</div>
-<!--CONFIGURE TAB END-->
-
-
-<!--RUN TESTS TAB START-->
-<div class="container hidden" id="tab-container3">
-    <div class="jumbotron" id="">
-        <div class="row">
-            <div class="hidden" id = "ProgressBarHolder">
-                <h1 style =  "text-align: center"> Running Tests </h1><br><br>
-                <div id="ProgressBar" class="pbar" style="width:1%">1%</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm5"></div>
-            <div class="col-sm2" style =  "text-align: center">
-                <button type="button" class="btn btn-success" id = "RunTest" onclick="RunTests();">Run Test</button>
-            </div>
-            <div class="col-sm5"></div>
-        </div>
+    <!--REVIEW TAB START-->
+    <div class="container hidden" id="tab-container4">
+        <p>Nothing to see here yet.</p>
     </div>
+    <!--REVIEW TAB END-->
 
-</div>
-<!--RUN TESTS TAB END-->
+    <!--UPLOAD TAB START-->
+    <div class="container" id="tab-container0">
 
+        <div class="row">
+            <div class="col-sm-12" id="words">
+                <h1>thanks for using the CAOSHI HYDROQUALITY client.</h1>
+                <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                    Blah blah blah blah. Blabob Blah Bla Bla.
+                    Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12" id="DownHold">
+                <h1>Welcome to CAOSHI HYDROQUALITY client.</h1>
+                <button type="button" class="btn btn-success" id = "Down" onclick=";">Download Quality Controlled Data</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12" id="test">
+                <h1>Welcome to CAOSHI HYDROQUALITY client.</h1>
+                <button type="button" class="btn btn-success" id = "ContUp" onclick=";">Continue Uploading with CUHASI </button>
+            </div>
+        </div>
+        <br>
 
-<!--REVIEW TAB START-->
-<div class="container hidden" id="tab-container4">
-    <p>Nothing to see here yet.</p>
-</div>
-<!--REVIEW TAB END-->
+    </div>
+    <!--UPLOAD TAB END-->
 
 
 </body>
