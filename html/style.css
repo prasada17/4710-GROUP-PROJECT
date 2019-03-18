@@ -51,7 +51,6 @@
 
 #detectedcolumns {
     text-align: left;
-    height: 400px;
     
     background: lightblue;
     border: 1px solid black;
@@ -96,9 +95,9 @@
 #datamodtablecont {
     background-color: lightblue;
     max-height: 300px;
+    max-width: 93%;
     overflow: auto;
     justify-content: left;
-    margin-left: -5%;
 }
 
 
