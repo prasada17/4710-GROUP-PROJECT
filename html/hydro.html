@@ -81,7 +81,7 @@
             </div>
             <div class="col-sm-6">
                 <div class="container">
-                    <div class="jumbotron inactive" id="continuebutton" onclick="switchtab(1)">
+                    <div class="jumbotron inactive continuebutton" id="continuebutton0" onclick="switchtab(1)">
                         <h3 id="test">Continue</h3>
                     </div>
                 </div>
@@ -287,6 +287,9 @@
                             <option>UTCOffset</option>
                             <option>DateTimeUTC</option>
                         </select>
+                        <br>
+                        <button class="btn" onclick="contbutton(1);">Accept</button>
+
                     </div>
                 </div>
             </div>
@@ -296,7 +299,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="container" style="float: right;">
-                    <div class="jumbotron inactive" id="continuebutton" onclick="switchtab(2)">
+                    <div class="jumbotron inactive continuebutton" id="continuebutton1" onclick="switchtab(2)">
                         <h3 id="test">Continue</h3>
                     </div>
                 </div>
@@ -524,7 +527,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="unload();showtable();contbutton();">Do Something</button>
+                <button type="button" class="btn btn-primary" onclick="unload();showtable();contbutton(0);">Do Something</button>
             </div>
         </div>
     </div>
