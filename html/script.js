@@ -2,7 +2,7 @@
 
 // Hides tab below the given number, unhides tab of the given number.
 function switchtab(number) {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         let element = document.getElementById("tab-container" + i.toString());
         if (number == i) {
             element.classList.remove("hidden");
