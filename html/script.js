@@ -2,6 +2,14 @@
 
 // Hides tab below the given number, unhides tab of the given number.
 function switchtab(number) {
+    let ele = document.getElementById("NavBar");
+    if (number == 4){
+        ele.classList.remove("noclick");
+    }
+    else {
+        ele.classList.add("noclick");
+    }
+
     for (let i = 0; i < 6; i++) {
         let element = document.getElementById("tab-container" + i.toString());
         let element2 = document.getElementById("t" + i.toString());
@@ -11,16 +19,6 @@ function switchtab(number) {
         } else {
             element.classList.add("hidden");
             element2.classList.remove("active");
-        }
-    }
-
-    for (let i = 0; i < 5; i++) {
-        let element = document.getElementById("t" + i.toString());
-        if (number == 4){
-            element.classList.add("click");
-        }
-        else {
-            element.classList.remove("click");
         }
     }
 }

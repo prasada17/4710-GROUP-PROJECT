@@ -102,11 +102,11 @@
     min-height: 400px;
 }
 
-.nav-tabs {
+.noclick {
     pointer-events: none;
 }
 
-#click {
+.click {
     pointer-events: auto;
 }
 
