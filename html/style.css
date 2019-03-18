@@ -2,7 +2,7 @@
 #logo {
     padding-top: 1%;
     padding-left: 5%;
-    color: cadetblue;
+    color: lightblue;
 }
 
 .text-large {
@@ -44,6 +44,31 @@
     border-color: black;
 }
 
+#tab-container1 {
+    width : 100%;
+}
+
+
+#detectedcolumns {
+    text-align: left;
+    height: 400px;
+    
+    background: lightblue;
+    border: 1px solid black;
+   
+    
+}
+
+#datetimecolumn {
+    text-align: left;
+    height: 250px;
+    width: 400px;
+    background: lightblue;
+    border: 1px solid black;
+   
+    
+}
+
 #selectbutton {
     text-align: center;
     height: 30%;
@@ -66,6 +91,14 @@
 
 #continuebutton.active {
     background-color: darkgreen;
+}
+
+#datamodtablecont {
+    background-color: lightblue;
+    max-height: 300px;
+    overflow: auto;
+    justify-content: left;
+    margin-left: -5%;
 }
 
 
