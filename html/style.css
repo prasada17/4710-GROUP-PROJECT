@@ -69,6 +69,12 @@
 }
 
 
+#configure {
+    margin: auto ;
+    background-color: lightblue;
+    min-height: 400px;
+}
+
 .nav-tabs {
     pointer-events: none;
 }

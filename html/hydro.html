@@ -99,8 +99,34 @@
 
 
 <!--CONFIGURE TAB START-->
+    <!--Srollable data table-->
 <div class="container hidden" id="tab-container2">
-    <p>Nothing to see here yet.</p>
+
+    <div class="row">
+        <div class="jumbotron" id="configure">
+            <div class="col-sm-3">
+                <h4 id="test">Data Fields</h4>
+                <div class="jumbotron" style="background-color: white; height: 300px;">
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <h4 id="test">Data Field Metadata</h4>
+                <div class="jumbotron" style="background-color: white; height: 200px;">
+                </div>
+                <button class="btn" style="width: 100%">Modify Metadata</button>
+            </div>
+            <div class="col-sm-6">
+                <h4 id="test">QC Tests</h4>
+                <div class="jumbotron" style="background-color: white; height: 200px;">
+                </div>
+                <div style="text-align: center;">
+                    <button class="btn" style="width: 30%">Add Test</button>
+                    <button class="btn" style="width: 30%">Modify Test</button>
+                    <button class="btn" style="width: 30%">Remove Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--CONFIGURE TAB END-->
 
@@ -150,9 +176,9 @@
 <!--MODAL END-->
 
 
-<!-- DEMO TABLE START-->
+<!-- DEMO FILE TABLE START-->
 <div class="container hidden">
-    <div class="jumbotron" id="filebutton">
+    <div class="jumbotron" id="filetable">
         <table class="table table-bordered" id="table">
             <thead>
             <tr>
@@ -181,7 +207,6 @@
         </table>
     </div>
 </div>
-<!-- DEMO TABLE END-->
-
+<!-- DEMO FILE TABLE END-->
 
 </html>

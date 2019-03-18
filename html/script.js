@@ -27,7 +27,12 @@ function unload() {
 
 function showtable() {
     let element = document.getElementById("filedrop");
-    element.innerHTML = document.getElementById("filebutton").innerHTML;
+    element.innerHTML = document.getElementById("filetable").innerHTML;
+}
+
+function showdatamodtable() {
+    let element = document.getElementById("datamodtablecont");
+    element.innerHTML = document.getElementById("datamodtable").innerHTML;
 }
 
 function contbutton() {
