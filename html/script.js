@@ -3,7 +3,7 @@
 // Hides tab below the given number, unhides tab of the given number.
 function switchtab(number) {
     let ele = document.getElementById("NavBar");
-    if (number == 4){
+    if (number == 5){
         ele.classList.remove("noclick");
     }
     else {
