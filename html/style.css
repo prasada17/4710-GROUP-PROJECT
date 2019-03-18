@@ -90,13 +90,13 @@
 
 #datamodtablecont {
     background-color: lightblue;
-    max-height: 300px;
+    max-height: 250px;
     max-width: 93%;
     overflow: auto;
     justify-content: left;
 }
 
-.configure {
+#configure {
     margin: auto ;
     background-color: lightblue;
     min-height: 400px;
