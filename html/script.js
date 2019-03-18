@@ -6,9 +6,6 @@ function switchtab(number) {
     if (number == 5){
         ele.classList.remove("noclick");
     }
-    else {
-        ele.classList.add("noclick");
-    }
 
     for (let i = 0; i < 6; i++) {
         let element = document.getElementById("tab-container" + i.toString());
