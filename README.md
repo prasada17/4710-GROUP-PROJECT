@@ -27,14 +27,15 @@ Group project
 
 Requirements:
 - Upload a CSV file (example 37)
+- Drag and Drop (example 41)
 - Preview the uploaded CSV file (example 38)
-- Wrapped processed data using JSON (will be introduced)
+- Wrapped processed data using JSON (example 42)
 - Transport processed data to the frontend (example 35)
 - Visualize data (Google Chart)
+- Store user input metadata inside “data” folder (example 43)
 - Use “NRDC_data.csv”
 - Submit through Github, TA’s Github username gudivada95 and my username ruiwu1990
 - Due April 1
-
 
 # 4710-HW-7(FINAL GROUP PROJECT)
 
