@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+    
+    {% block content %}
+
+    <!--UPLOAD TAB START-->
+    <div class="container" id="tab-container0">
+
+        <div class="row">
+            <div class="col-sm-12" id="test">
+                <h1>Welcome to CAOSHI HYDROQUALITY client.</h1>
+                <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                    Blah blah blah blah. Blabob Blah Bla Bla.
+                    Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                </p>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container">
+            <div class="jumbotron" id="filedrop">
+                <form id="my_dropzone" action="/api/post_csv" method='post' class="dropzone">
+                    <div class="dz-default dz-message">
+                        <span class="glyphicon glyphicon-cloud-upload"></span>
+                        <h2 id="test"> DRAG AND DROP A .CSV FILE INTO THIS SQUARE</h2>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-sm-12">
+                <div class="container">
+                    <div class="jumbotron inactive continuebutton" id="continuebutton0" onclick="switchtab(1)">
+                        <h3 id="test">Continue</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="/test">TEST</a>
+
+    </div>
+    <!--UPLOAD TAB END-->
+
+    {% endblock %}

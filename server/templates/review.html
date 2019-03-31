@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!--REVIEW TAB START-->
+    <div class="container" id="tab-container4">
+        <div id="outland">
+            <div id="graphholder">
+                <div id="graphbox">
+                    <div id="header">
+                        <h1>DataValue1</h1>
+                    </div>
+                    <img src="chrome_2019-03-17_22-16-12.png" alt="graphpic">
+                </div>
+
+                <div id="prior">
+                    <div id=priorbox>
+                        <button type="button" class="btn btn-success" id = "priordata" onclick=""><- Prior Data Column</button>
+                    </div>
+                </div>
+                <div id="next">
+                    <div id=nextbox>
+                        <button type="button" class="btn btn-success" id = "nextdata" onclick="switchtab(5)">Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dataholder">
+                <div id="metadata">
+                    <h2>Graph Metadata</h2>
+                    <div id="metadatabox">
+                        <ul>
+                            <li><a>DateTime:</a></li>
+
+                            <li><a>Measurement:</a></li>
+
+                            <li><a>Flag Code:</a></li>
+
+                            <li><a>Flag Meaning:</a></li>
+
+                            <li><a>Date Flagged:</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dataholder2">
+                <div id="flaggeddata">
+                    <h2>Flagged Data</h2>
+                    <div id="flaggeddatabox">
+                        <table id="flaggeddatatable" class="table table-striped table-bordered tablesm" cellspacing="0" width="100%" id="datamodtable">
+                            <thead>
+
+                                <tr>
+                                    <th>DateTime</th>
+                                    <th>Value</th>
+                                    <th>QC Flag</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            <tr>
+                                <td> data </td>
+                                <td> data </td>
+                                <td> data </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--REVIEW TAB END-->
+    
+    <br><br><br><br><br><br><br>
+    <a href="/test5">TEST</a>
+
+{% endblock %}
