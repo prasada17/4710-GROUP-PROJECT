@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>HydroQ</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type=text/javascript src="{{ url_for('static', filename='js/script.js') }}"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- this css file is from online source, author is Matias Meno -->
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <!-- this is the library we used for this example -->
+    <script src="/static/js/dropzone.js"></script>
+    <script src="/static/js/index.js"></script>
 </head>
 
 
@@ -67,16 +71,18 @@
             </div>
         </div>
 
+        {{ script0 }}
+
         <div class="container">
-            <div class="col-sm-6">
+<!--             <div class="col-sm-6">
                 <div class="container btn" data-toggle="modal" data-target="#exampleModalCenter">
                     <div class="jumbotron" id="selectbutton">
                         <span class="glyphicon glyphicon-folder-open"></span>
                         <h3 id="test">SELECT A .CSV FILE</h3>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-6">
+            </div> -->
+            <div class="col-sm-12">
                 <div class="container">
                     <div class="jumbotron inactive continuebutton" id="continuebutton0" onclick="switchtab(1)">
                         <h3 id="test">Continue</h3>
