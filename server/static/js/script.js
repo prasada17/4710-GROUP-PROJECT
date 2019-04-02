@@ -1,4 +1,4 @@
-
+//TEST
 
 // Hides tab below the given number, unhides tab of the given number.
 function switchtab(number) {
@@ -7,15 +7,12 @@ function switchtab(number) {
         ele.classList.remove("noclick");
     }
 
-    for (let i = 0; i < 6; i++) {
-        let element = document.getElementById("tab-container" + i.toString());
-        let element2 = document.getElementById("t" + i.toString());
+    for (let i = 0; i < 5; i++) {
+        let element = document.getElementById("t" + i.toString());
         if (number == i) {
-            element.classList.remove("hidden");
-            element2.classList.add("active");
+            element.classList.add("active");
         } else {
-            element.classList.add("hidden");
-            element2.classList.remove("active");
+            element.classList.remove("active");
         }
     }
 }
@@ -65,4 +62,13 @@ function RunTests() {
         }
 
     }
+}
+
+function movepage(page) {
+    window.location.replace("/" + page);
+}
+
+function showupload() {
+    document.getElementById("prev").classList.remove("hidden");
+    document.getElementById("submitcsv").classList.remove("hidden");
 }

@@ -2,6 +2,7 @@
 import os
 from flask import Flask, request, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
+from flask_dropzone import Dropzone
 import util
 
 # get current app directory
@@ -34,34 +35,38 @@ def post_csv():
 		if os.path.exists(app.config['UPLOAD_FOLDER']) == False:
 			os.makedirs(app.config['UPLOAD_FOLDER'])
 		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-		print('uploading')
-		return render_template('upload2.html')
+	# 	# DROPZONE_REDIRECT_VIEW = ('upload2.html')
+	# 	print('uploading')
+	return render_template('upload.html')
 
-
-
-@app.route('/test')
-def go():
-    return render_template('verify.html')
-
-@app.route('/test2')
-def goo():
-    return render_template('configure.html')
-
-@app.route('/test3')
-def gooo():
-    return render_template('runtests.html')
-
-@app.route('/test4')
-def goooo():
-    return render_template('review.html')
-
-@app.route('/test5')
-def gooooo():
-    return render_template('done.html')
 
 @app.route('/')
 def index():
     return render_template('upload.html')
+
+@app.route('/upload2')
+def upload2():
+    return render_template('upload2.html')
+
+@app.route('/verify')
+def verify():
+    return render_template('verify.html')
+
+@app.route('/config')
+def config():
+    return render_template('configure.html')
+
+@app.route('/runtests')
+def runtests():
+    return render_template('runtests.html')
+
+@app.route('/review')
+def review():
+    return render_template('review.html')
+
+@app.route('/done')
+def done():
+    return render_template('done.html')
 
 
 if __name__ == '__main__':

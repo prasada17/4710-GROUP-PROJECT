@@ -21,7 +21,7 @@
 
         <div class="container">
             <div class="jumbotron" id="filedrop">
-                <form id="my_dropzone" action="/api/post_csv" method='post' class="dropzone">
+                <form id="my_dropzone" action="/api/post_csv" method='post' class="dropzone"">
                     <div class="dz-default dz-message">
                         <span class="glyphicon glyphicon-cloud-upload"></span>
                         <h2 id="test"> DRAG AND DROP A .CSV FILE INTO THIS SQUARE</h2>
@@ -30,17 +30,41 @@
             </div>
         </div>
 
+        {% block cont %}
+
         <div class="container">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
+                        <a href="/upload2" class="" id="dataprev">Preview Data</a><br>
+                        <a href="/verify" class="hidden" id="submitcsv">Submit</a>
+            </div>
+            <div class="col-sm-6">
                 <div class="container">
-                    <div class="jumbotron inactive continuebutton" id="continuebutton0" onclick="switchtab(1)">
+                    <div class="jumbotron inactive continuebutton" id="continuebutton0" onclick="movepage('verify');">
                         <h3 id="test">Continue</h3>
                     </div>
                 </div>
             </div>
         </div>
 
-        <a href="/test">TEST</a>
+        <script>
+                Dropzone.options.my_dropzone = {
+                    maxFilesize: 10, // Mb
+                    uploadMultiple : false,
+                    init: function () {
+                        this.on('complete', function () {
+                            if (this.getUploadingFiles().length === 0 && this.getQueuedFiles().length === 0) {
+                                showupload(); 
+                                alert("Done");
+                            }
+                        });
+                    }
+               };
+
+        </script>
+
+        {{done}}
+
+        {% endblock %}
 
     </div>
     <!--UPLOAD TAB END-->
