@@ -34,8 +34,12 @@
 
         <div class="container">
             <div class="col-sm-6">
-                        <a href="/upload2" class="" id="dataprev">Preview Data</a><br>
-                        <a href="/verify" class="hidden" id="submitcsv">Submit</a>
+                <div class="container">
+                    <form class="jumbotron" id="selectbutton" method=post enctype=multipart/form-data>
+                        <input type=file name=file>
+                        <input type=submit value=Upload>
+                    </form>
+                </div>
             </div>
             <div class="col-sm-6">
                 <div class="container">
@@ -45,20 +49,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-                Dropzone.options.my_dropzone = {
-                    maxFilesize: 10, // Mb
-                    uploadMultiple : false,
-                    previewsContainer : false,
-                    success: function (file, response) {
-                        this.removeFile(file);
-                    }
-               };
-
-        </script>
-
-        {{done}}
 
         {% endblock %}
 
