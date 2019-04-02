@@ -3,6 +3,33 @@
 {% block cont %}
 
 <div class="container">
+    <div class="jumbotron" id="filedrop">
+	<p>{{column_names}}</p>
+	<p>{{data_part}}</p>
+
+	<table class="table">
+		<thead>
+		  <tr>
+			{% for item in column_names %}
+				<th>{{item}}</th>
+			{% endfor %}
+		  </tr>
+		</thead>
+		<tbody>
+		  {% for row in data_part %}
+			   <tr>
+				{% for data in row %}
+					<td>{{ data }}</td>
+				{% endfor %}
+			   </tr>
+		   {% endfor %}
+		</tbody>
+	  </table>
+
+    </div>
+</div>
+
+<div class="container">
 	<div class="col-sm-6"></div>
     <div class="col-sm-6">
         <div class="container">
