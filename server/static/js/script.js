@@ -71,7 +71,39 @@ function movepage(page) {
     window.location.replace("/" + page);
 }
 
-function showupload() {
-    document.getElementById("prev").classList.remove("hidden");
-    document.getElementById("submitcsv").classList.remove("hidden");
+function datecolupdate() {
+
+    let $available = $('#colnames');
+    let $datetimecol = $('#datetimecol');
+    $datetimecol.empty();
+    $datetimecol.append($available.children().clone());
+
+}
+
+function movetocoldata() {
+    var $colnames = $('#colnames');
+    var $coldata = $('#coldata');
+    var selectedItems = $colnames.val() || [];
+
+    for (var i = 0; i < selectedItems.length; i++) {
+        var item = "<option value=\"" + selectedItems[i] + "\">" + selectedItems[i] + "</option>";
+        $coldata.append(item);
+        $colnames.find('[value="' + selectedItems[i] + '"]').remove();
+    }
+
+    datecolupdate();
+}
+
+function movetocolname() {
+    var $colnames = $('#colnames');
+    var $coldata = $('#coldata');
+    var selectedItems = $coldata.val() || [];
+
+    for (var i = 0; i < selectedItems.length; i++) {
+        var item = "<option value=\"" + selectedItems[i] + "\">" + selectedItems[i] + "</option>";
+        $colnames.append(item);
+        $coldata.find('[value="' + selectedItems[i] + '"]').remove();
+    }
+
+    datecolupdate();
 }
