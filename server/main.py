@@ -13,6 +13,7 @@ UPLOAD_FOLDER = dir_path + '/data/'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['_FILE'] = UPLOAD_FOLDER + 'NRDC_data.csv'
+filename = ''
 
 @app.route('/' , methods=['POST', 'GET'])
 def upload():
@@ -38,22 +39,26 @@ def upload():
 			print(filename)
 			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 			column_names, data_part = util.preview_csv(app.config['UPLOAD_FOLDER']+filename, 3)
-			return render_template('upload2.html', column_names=column_names, data_part=data_part)
+			return render_template('upload2.html', column_names=column_names, data_part=data_part, filename=filename)
 	elif request.method == 'GET':
 		return render_template('upload.html')
 
 @app.route('/upload2')
 def upload2():
 	column_names, data_part = util.preview_csv(app.config['_FILE'], 3)
-	return render_template('upload2.html', column_names=column_names, data_part=data_part)
+	return render_template('upload2.html', column_names=column_names, data_part=data_part, filename=filename)
+
 
 @app.route('/verify')
 def verify():
-    return render_template('verify.html')
+	column_names, data_part = util.preview_csv(app.config['_FILE'], 100)
+	return render_template('verify.html', column_names=column_names, data_part=data_part, filename=filename)
+
 
 @app.route('/config')
 def config():
     return render_template('configure.html')
+
 
 @app.route('/runtests')
 def runtests():
