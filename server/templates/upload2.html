@@ -4,10 +4,10 @@
 
 <div class="container">
     <div class="jumbotron" id="filedrop">
-	<p>{{column_names}}</p>
-	<p>{{data_part}}</p>
+	<p class="hidden">{{column_names}}</p>
+	<p class="hidden">{{data_part}}</p>
 
-	<table class="table">
+	<table class="table table-bordered" id="table">
 		<thead>
 		  <tr>
 			{% for item in column_names %}
