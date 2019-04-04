@@ -43,6 +43,8 @@ def upload():
 			column_names, data_part = util.preview_csv(app.config['UPLOAD_FOLDER']+filename, 3)
 			return render_template('upload2.html', column_names=column_names, data_part=data_part, filename=app.config['filename'])
 	elif request.method == 'GET':
+		app.config['_DATA_COLS'] = ""
+		app.config['_DATE_COL'] = ""
 		return render_template('upload.html')
 
 
