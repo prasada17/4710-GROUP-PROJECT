@@ -13,6 +13,11 @@
             <div class="col-sm-3">
                 <h4 id="test">Data Fields</h4>
                 <div class="jumbotron" style="background-color: white; height: 300px;">
+                    <select class="form-control" multiple id="configdata">
+                        {% for item in data_col_names %}
+                                    <option value="{{item}}">{{item}}</option>
+                        {% endfor %}
+                    </select>
                 </div>
             </div>
             <div class="col-sm-3">

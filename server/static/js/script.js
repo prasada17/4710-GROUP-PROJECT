@@ -107,3 +107,13 @@ function movetocolname() {
 
     datecolupdate();
 }
+
+function checkdata() {
+    var $coldata = $('#coldata').children();
+    for (var i = 0; i < $coldata.length; i++) {
+        $("#logo").load('api/datacol/' + $coldata[i].innerHTML);
+    }
+    var $datecol = $('#datetimecol').val() || [];
+    movepage('api/date/' + $datecol[0]);
+    contbutton(1);
+}

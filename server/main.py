@@ -12,6 +12,9 @@ UPLOAD_FOLDER = dir_path + '/data/'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['_FILE'] = UPLOAD_FOLDER + 'NRDC_data.csv'
+app.config['_META'] = UPLOAD_FOLDER + 'meta_data.txt'
+app.config['_DATA_COLS'] = ""
+app.config['_DATE_COL'] = ""
 
 @app.route('/' , methods=['POST', 'GET'])
 def upload():
@@ -54,11 +57,23 @@ def verify():
 	column_names, data_part = util.preview_csv(app.config['_FILE'], 100)
 	return render_template('verify.html', column_names=column_names, data_part=data_part, filename=app.config['filename'])
 
-
 @app.route('/config')
 def config():
-    return render_template('configure.html')
+	data_col_names = app.config['_DATA_COLS'].split(' ')
+	print(data_col_names)
+	return render_template('configure.html', data_col_names=data_col_names)
 
+@app.route('/api/datacol/<colname>')
+def apidata(colname):
+	app.config['_DATA_COLS'] += colname + " "
+	print(app.config['_DATA_COLS'])
+	return ('', 204)
+
+@app.route('/api/date/<colname>')
+def apidate(colname):
+	app.config['_DATE_COL'] = colname 
+	print(app.config['_DATE_COL'])
+	return ('', 204)
 
 @app.route('/runtests')
 def runtests():
