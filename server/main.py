@@ -15,6 +15,7 @@ app.config['_FILE'] = UPLOAD_FOLDER + 'NRDC_data.csv'
 app.config['_META'] = UPLOAD_FOLDER + 'meta_data.txt'
 app.config['_DATA_COLS'] = ""
 app.config['_DATE_COL'] = ""
+app.config['META_FILE'] = UPLOAD_FOLDER + 'meta_data.txt'
 
 @app.route('/' , methods=['POST', 'GET'])
 def upload():
@@ -95,3 +96,14 @@ if __name__ == '__main__':
     ip = '127.0.0.1'
     app.run(host=ip)
 
+@app.route('/api/save', methods=['POST'])
+def process_csv():
+	input_values = request.form
+	result_str = 'First Name:' + request.form['first_name'] + '\n' + \
+				 'Last Name:' + request.form['last_name'] + '\n' + \
+				 'Email:' + request.form['email']
+	# print(result_str)
+	text_file = open(app.config['META_FILE'], "w")
+	text_file.write(result_str)
+	text_file.close()
+	return render_template('success.html')
