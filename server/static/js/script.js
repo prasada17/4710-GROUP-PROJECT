@@ -128,8 +128,22 @@ function updateDataFieldInfo() {
     text += newli('Name: ' + $fields[0]);
     text += newli('Units: Undefined');
     text += newli('Data Type: Undefined');
-    text += newli('Time Units Name: Undefined');
     text += newli('Time Interval: Undefined');
+    text += newli('Time Zone: Undefined');
+    $metainfo.html(text);
+}
+
+function modDataFieldInfo() {
+    let $fields = $('#configdata').val() || [];
+    let $field = $fields[0];
+    let $metainfo = $('#datafield');
+    $metainfo.empty();
+    let text = "";
+    text += newli('Name: ' + $fields[0]);
+    text += newli('Units: ' + $('#unitsInput').val());
+    text += newli('Data Type: ' + $('#typeInput').val());
+    text += newli('Time Interval: ' + $('#timeInput').val());
+    text += newli('Time Zone: ' + $('#zoneInput').val());
     $metainfo.html(text);
 }
 
