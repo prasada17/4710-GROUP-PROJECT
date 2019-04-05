@@ -122,4 +122,18 @@ function updateDataFieldInfo() {
     let $fields = $('#configdata').val() || [];
     let $field = $fields[0];
     $('#exampleModalLabel').text($field);
+    let $metainfo = $('#datafield');
+    $metainfo.empty();
+    let text = "";
+    text += newli('Name: ' + $fields[0]);
+    text += newli('Units: Undefined');
+    text += newli('Data Type: Undefined');
+    text += newli('Time Units Name: Undefined');
+    text += newli('Time Interval: Undefined');
+    $metainfo.html(text);
+}
+
+function newli(string) {
+    let text = '<li class="list-group-item">' + string + '</li>';
+    return text;
 }
