@@ -55,7 +55,7 @@
         <div class="col-sm-6"></div>
         <div class="col-sm-6">
             <div class="container" style="width: available; height: min-content;">
-                <div class="jumbotron inactive continuebutton" id="continuebutton2" onclick="switchtab(3)">
+                <div class="jumbotron inactive continuebutton" id="continuebutton2" onclick="movepage('runtests')">
                     <h3 id="test">Continue</h3>
                 </div>
             </div>
@@ -73,80 +73,80 @@
 
 <!-- Modal -->
 <div class="modal fade" id="metamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Data value 1</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-      </button>
-  </div>
-  <div class="modal-body">
-    <form>
-        <label for="unitsInput">Units: </label>
-        <input type="text" class="form-control" id="unitsInput" placeholder="Input Unit of Measurment">
-        <label for="typeInput">Data Type: </label>
-        <input type="text" class="form-control" id="typeInput" value="Average">
-        <label for="timeInput">Time Interval: </label>
-        <input type="text" class="form-control" id="timeInput" value="00:00:00">
-        <label for="zoneInput">Time Zone: </label>
-        <input type="text" class="form-control" id="zoneInput" value="UTC">
-    </form>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Data value 1</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <label for="unitsInput">Units: </label>
+                    <input type="text" class="form-control" id="unitsInput" placeholder="Input Unit of Measurment">
+                    <label for="typeInput">Data Type: </label>
+                    <input type="text" class="form-control" id="typeInput" value="Average">
+                    <label for="timeInput">Time Interval: </label>
+                    <input type="text" class="form-control" id="timeInput" value="00:00:00">
+                    <label for="zoneInput">Time Zone: </label>
+                    <input type="text" class="form-control" id="zoneInput" value="UTC">
+                </form>
 
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-    <button type="button" class="btn btn-primary" onclick="modDataFieldInfo();" data-dismiss="modal">Save changes</button>
-</div>
-</div>
-</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="modDataFieldInfo();" data-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
 </div>
 <!--End Modal -->
 
 <!-- Modal -->
 <div class="modal fade" id="testadd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="selectedTest">New Test</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-      </button>
-  </div>
-  <div class="modal-body">
-    <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-5">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"">
-          Select Test
-      </button>
-      <div class="dropdown-menu">
-          <div class="dropdown-item" href="#" onclick="threshSelect();">Threshhold</div>
-          <div class="dropdown-item" href="#"><strike>Test 2</strike></div>
-          <div class="dropdown-item" href="#"><strike>Test 3</strike></div>
-      </div>
-      </div>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="selectedTest">New Test</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-5">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"">
+                        Select Test
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-item" href="#" onclick="threshSelect();">Threshhold</div>
+                            <div class="dropdown-item" href="#"><strike>Test 2</strike></div>
+                            <div class="dropdown-item" href="#"><strike>Test 3</strike></div>
+                        </div>
+                    </div>
 
-      <div class="col-sm-6 hidden" id="thresh">
-      <form>
-          <div class="form-group">
-            <label for="LowThresh">Upper Threshold</label>
-            <input type="number" class="form-control" id="LowThresh" placeholder="Input an integer">
+                    <div class="col-sm-6 hidden" id="thresh">
+                        <form>
+                            <div class="form-group">
+                                <label for="LowThresh">Upper Threshold</label>
+                                <input type="number" class="form-control" id="LowThresh" placeholder="Input an integer">
+                            </div>
+                            <div class="form-group">
+                                <label for="UpThresh">Lower Threshold</label>
+                                <input type="number" class="form-control" id="UpThresh" placeholder="Input an integer">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="contbutton(2); SetThresh();" data-dismiss="modal">Save changes</button>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="UpThresh">Lower Threshold</label>
-            <input type="number" class="form-control" id="UpThresh" placeholder="Input an integer">
-        </div>
-        </form>
     </div>
-</div>
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary" onclick="contbutton(2); SetThresh();">Save changes</button>
-</div>
-</div>
-</div>
 </div>
 <!--End Modal -->
 {% endblock %}

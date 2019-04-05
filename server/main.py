@@ -1,6 +1,5 @@
-
+import pandas as pd
 import os
-import time
 from flask import Flask, request, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
 import util
@@ -15,7 +14,10 @@ app.config['_FILE'] = UPLOAD_FOLDER + 'NRDC_data.csv'
 app.config['_META'] = UPLOAD_FOLDER + 'meta_data.txt'
 app.config['_DATA_COLS'] = ""
 app.config['_DATE_COL'] = ""
+app.config['_QUAL'] = ""
+app.config['_OUT'] = ""
 app.config['META_FILE'] = UPLOAD_FOLDER + 'meta_data.txt'
+
 
 @app.route('/' , methods=['POST', 'GET'])
 def upload():
@@ -77,37 +79,39 @@ def apidata(colname):
 
 @app.route('/api/date/<colname>')
 def apidate(colname):
-	app.config['_DATE_COL'] = colname 
+	app.config['_DATE_COL'] = colname
 	print(app.config['_DATE_COL'])
 	return ('', 204)
 
 
 @app.route('/runtests')
 def runtests():
-    return render_template('runtests.html')
-
+	return render_template('runtests.html')
 
 @app.route('/review')
 def review():
-    return render_template('review.html')
+	return render_template('review.html', outlier=app.config["OUT"], qual=app.config["QUAL"], meta=app.config['_META'])
 
 
 @app.route('/done')
 def done():
-    return render_template('done.html')
+	return render_template('done.html')
 
-@app.route('/api/thresh/<col>/<low>/<high>')
-def settest(col, low, high):
 
-	results = threshold_process_method(app.config['filename'], col, low, high)
-
-	return render_template('review', outlier=something)
+@app.route('/api/thresh/<col>/<high>/<low>')
+def settest(col, high, low):
+	qualified, outlier = util.threshold_process_method(app.config['_FILE'], col, float(low), float(high))
+	print(qualified)
+	print(outlier)
+	app.config["QUAL"] = qualified
+	app.config["OUT"] = outlier
+	return render_template('runtests.html')
 
 
 if __name__ == '__main__':
-    app.debug = True
-    ip = '127.0.0.1'
-    app.run(host=ip)
+	app.debug = True
+	ip = '127.0.0.1'
+	app.run(host=ip)
 
 
 @app.route('/api/save', methods=['POST'])
@@ -121,3 +125,5 @@ def process_csv():
 	text_file.write(result_str)
 	text_file.close()
 	return render_template('success.html')
+
+

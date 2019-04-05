@@ -21,293 +21,293 @@
 
 <body>
 
-    <!--LOGO AND NAV BAR(breadcrumb) START-->
-    <div class="row">
-        <div class="col-md-12">
-            <p class="text-large" id="logo"> HYDRO<span style= "color:green">QUALITY</span> </p>
-        </div>
+<!--LOGO AND NAV BAR(breadcrumb) START-->
+<div class="row">
+    <div class="col-md-12">
+        <p class="text-large" id="logo"> HYDRO<span style= "color:green">QUALITY</span> </p>
     </div>
+</div>
 
-    <div class="row" id="tabsbg">
-        <div id="tabs">
-            <ul class="nav nav-tabs noclick" id =  "NavBar">
-                <li id="t0" class="active"><a href="#"onclick="switchtab(0);"><h3>Upload ></h3></a></li>
-                <li id="t1"><a href="#" onclick="switchtab(1);"><h3>Verify  ></h3></a></li>
-                <li id="t2"><a href="#" onclick="switchtab(2);"><h3>Configure ></h3></a></li>
-                <li id="t3"><a href="#" onclick="switchtab(3);"><h3>Run Tests  ></h3></a></li>
-                <li id="t4"><a href="#" onclick="switchtab(4);"><h3>Review  ></h3></a></li>
-            </ul>
+<div class="row" id="tabsbg">
+    <div id="tabs">
+        <ul class="nav nav-tabs noclick" id =  "NavBar">
+            <li id="t0" class="active"><a href="#"onclick="switchtab(0);"><h3>Upload ></h3></a></li>
+            <li id="t1"><a href="#" onclick="switchtab(1);"><h3>Verify  ></h3></a></li>
+            <li id="t2"><a href="#" onclick="switchtab(2);"><h3>Configure ></h3></a></li>
+            <li id="t3"><a href="#" onclick="switchtab(3);"><h3>Run Tests  ></h3></a></li>
+            <li id="t4"><a href="#" onclick="switchtab(4);"><h3>Review  ></h3></a></li>
+        </ul>
+    </div>
+</div>
+<!--LOGO AND NAV BAR(breadcrumb) END-->
+
+<br>
+
+<!--UPLOAD TAB START-->
+<div class="container" id="tab-container0">
+
+    <div class="row">
+        <div class="col-sm-12" id="test">
+            <h1>Welcome to CAOSHI HYDROQUALITY client.</h1>
+            <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                Blah blah blah blah. Blabob Blah Bla Bla.
+                Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+            </p>
         </div>
     </div>
-    <!--LOGO AND NAV BAR(breadcrumb) END-->
 
     <br>
 
-    <!--UPLOAD TAB START-->
-    <div class="container" id="tab-container0">
-
-        <div class="row">
-            <div class="col-sm-12" id="test">
-                <h1>Welcome to CAOSHI HYDROQUALITY client.</h1>
-                <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
-                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
-                    Blah blah blah blah. Blabob Blah Bla Bla.
-                    Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
-                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
-                </p>
-            </div>
-        </div>
-
-        <br>
-
-        <div class="container">
-            <div class="jumbotron" id="filedrop">
-                <form id="my_dropzone" action="/api/post_csv" method='post' class="dropzone">
-                    <div class="dz-default dz-message">
-                        <span class="glyphicon glyphicon-cloud-upload"></span>
-                        <h2 id="test"> DRAG AND DROP A .CSV FILE INTO THIS SQUARE</h2>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-        <div class="container">
-<!--             <div class="col-sm-6">
-                <div class="container btn" data-toggle="modal" data-target="#exampleModalCenter">
-                    <div class="jumbotron" id="selectbutton">
-                        <span class="glyphicon glyphicon-folder-open"></span>
-                        <h3 id="test">SELECT A .CSV FILE</h3>
-                    </div>
+    <div class="container">
+        <div class="jumbotron" id="filedrop">
+            <form id="my_dropzone" action="/api/post_csv" method='post' class="dropzone">
+                <div class="dz-default dz-message">
+                    <span class="glyphicon glyphicon-cloud-upload"></span>
+                    <h2 id="test"> DRAG AND DROP A .CSV FILE INTO THIS SQUARE</h2>
                 </div>
-            </div> -->
-            <div class="col-sm-12">
-                <div class="container">
-                    <div class="jumbotron inactive continuebutton" id="continuebutton0" onclick="switchtab(1)">
-                        <h3 id="test">Continue</h3>
-                    </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <!--             <div class="col-sm-6">
+                        <div class="container btn" data-toggle="modal" data-target="#exampleModalCenter">
+                            <div class="jumbotron" id="selectbutton">
+                                <span class="glyphicon glyphicon-folder-open"></span>
+                                <h3 id="test">SELECT A .CSV FILE</h3>
+                            </div>
+                        </div>
+                    </div> -->
+        <div class="col-sm-12">
+            <div class="container">
+                <div class="jumbotron inactive continuebutton" id="continuebutton0" onclick="switchtab(1)">
+                    <h3 id="test">Continue</h3>
                 </div>
             </div>
         </div>
     </div>
-    <!--UPLOAD TAB END-->
+</div>
+<!--UPLOAD TAB END-->
 
 
-    <!--VERIFY TAB START-->
-    <div class="container hidden" id="tab-container1">
+<!--VERIFY TAB START-->
+<div class="container hidden" id="tab-container1">
 
-        <div class="container-fluid">
-            <div class="jumbotron" id="datamodtablecont">
+    <div class="container-fluid">
+        <div class="jumbotron" id="datamodtablecont">
 
-                <table id="table" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%" id="datamodtable">
-                    <thead>
+            <table id="table" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%" id="datamodtable">
+                <thead>
 
-                    <tr>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                        <th>Extn.</th>
-                        <th>E-mail</th>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
-                        <th>Extn.</th>
-                        <th>E-mail</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Tiger</td>
-                        <td>Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>5421</td>
-                        <td>t.nixon@datatables.net</td>
-                        <td>Tiger</td>
-                        <td>Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>$320,800</td>
-                        <td>5421</td>
-                        <td>t.nixon@datatables.net</td>
-                    </tr>
-                    <tr>
-                        <td>Garrett</td>
-                        <td>Winters</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>63</td>
-                        <td>2011/07/25</td>
-                        <td>$170,750</td>
-                        <td>8422</td>
-                        <td>g.winters@datatables.net</td>
-                        <td>Garrett</td>
-                        <td>Winters</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>63</td>
-                        <td>2011/07/25</td>
-                        <td>$170,750</td>
-                        <td>8422</td>
-                        <td>g.winters@datatables.net</td>
-                    </tr>
-                    <tr>
-                        <td>Ashton</td>
-                        <td>Cox</td>
-                        <td>Junior Technical Author</td>
-                        <td>San Francisco</td>
-                        <td>66</td>
-                        <td>2009/01/12</td>
-                        <td>$86,000</td>
-                        <td>1562</td>
-                        <td>a.cox@datatables.net</td>
-                        <td>Ashton</td>
-                        <td>Cox</td>
-                        <td>Junior Technical Author</td>
-                        <td>San Francisco</td>
-                        <td>66</td>
-                        <td>2009/01/12</td>
-                        <td>$86,000</td>
-                        <td>1562</td>
-                        <td>a.cox@datatables.net</td>
-                    </tr>
-                    <tr>
-                        <td>Cedric</td>
-                        <td>Kelly</td>
-                        <td>Senior Javascript Developer</td>
-                        <td>Edinburgh</td>
-                        <td>22</td>
-                        <td>2012/03/29</td>
-                        <td>$433,060</td>
-                        <td>6224</td>
-                        <td>c.kelly@datatables.net</td>
-                        <td>Cedric</td>
-                        <td>Kelly</td>
-                        <td>Senior Javascript Developer</td>
-                        <td>Edinburgh</td>
-                        <td>22</td>
-                        <td>2012/03/29</td>
-                        <td>$433,060</td>
-                        <td>6224</td>
-                        <td>c.kelly@datatables.net</td>
-                    </tr>
-                    <tr>
-                        <td>Airi</td>
-                        <td>Satou</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>33</td>
-                        <td>2008/11/28</td>
-                        <td>$162,700</td>
-                        <td>5407</td>
-                        <td>a.satou@datatables.net</td>
-                        <td>Airi</td>
-                        <td>Satou</td>
-                        <td>Accountant</td>
-                        <td>Tokyo</td>
-                        <td>33</td>
-                        <td>2008/11/28</td>
-                        <td>$162,700</td>
-                        <td>5407</td>
-                        <td>a.satou@datatables.net</td>
-                    </tr>
-                    <tr>
-                        <td>Brielle</td>
-                        <td>Williamson</td>
-                        <td>Integration Specialist</td>
-                        <td>New York</td>
-                        <td>61</td>
-                        <td>2012/12/02</td>
-                        <td>$372,000</td>
-                        <td>4804</td>
-                        <td>b.williamson@datatables.net</td>
-                        <td>Brielle</td>
-                        <td>Williamson</td>
-                        <td>Integration Specialist</td>
-                        <td>New York</td>
-                        <td>61</td>
-                        <td>2012/12/02</td>
-                        <td>$372,000</td>
-                        <td>4804</td>
-                        <td>b.williamson@datatables.net</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                    <th>Extn.</th>
+                    <th>E-mail</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                    <th>Extn.</th>
+                    <th>E-mail</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Tiger</td>
+                    <td>Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                    <td>5421</td>
+                    <td>t.nixon@datatables.net</td>
+                    <td>Tiger</td>
+                    <td>Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                    <td>5421</td>
+                    <td>t.nixon@datatables.net</td>
+                </tr>
+                <tr>
+                    <td>Garrett</td>
+                    <td>Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                    <td>8422</td>
+                    <td>g.winters@datatables.net</td>
+                    <td>Garrett</td>
+                    <td>Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                    <td>8422</td>
+                    <td>g.winters@datatables.net</td>
+                </tr>
+                <tr>
+                    <td>Ashton</td>
+                    <td>Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                    <td>1562</td>
+                    <td>a.cox@datatables.net</td>
+                    <td>Ashton</td>
+                    <td>Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                    <td>1562</td>
+                    <td>a.cox@datatables.net</td>
+                </tr>
+                <tr>
+                    <td>Cedric</td>
+                    <td>Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                    <td>6224</td>
+                    <td>c.kelly@datatables.net</td>
+                    <td>Cedric</td>
+                    <td>Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                    <td>6224</td>
+                    <td>c.kelly@datatables.net</td>
+                </tr>
+                <tr>
+                    <td>Airi</td>
+                    <td>Satou</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>2008/11/28</td>
+                    <td>$162,700</td>
+                    <td>5407</td>
+                    <td>a.satou@datatables.net</td>
+                    <td>Airi</td>
+                    <td>Satou</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>33</td>
+                    <td>2008/11/28</td>
+                    <td>$162,700</td>
+                    <td>5407</td>
+                    <td>a.satou@datatables.net</td>
+                </tr>
+                <tr>
+                    <td>Brielle</td>
+                    <td>Williamson</td>
+                    <td>Integration Specialist</td>
+                    <td>New York</td>
+                    <td>61</td>
+                    <td>2012/12/02</td>
+                    <td>$372,000</td>
+                    <td>4804</td>
+                    <td>b.williamson@datatables.net</td>
+                    <td>Brielle</td>
+                    <td>Williamson</td>
+                    <td>Integration Specialist</td>
+                    <td>New York</td>
+                    <td>61</td>
+                    <td>2012/12/02</td>
+                    <td>$372,000</td>
+                    <td>4804</td>
+                    <td>b.williamson@datatables.net</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="container" style="width: 100%; height: 100%;">
-                    <div class="jumbotron" id="detectedcolumns" style="height: 250px;">
-                        <div class="container" style="width: 40%; height: 100%; float: left;">
-                            <p>Detected column names </p>
-                            <select class="form-control" multiple>
-                                <option>Mustard</option>
-                                <option>Ketchup</option>
-                                <option>Relish</option>
-                            </select>
-                        </div>
-
-                        <div class="container" style="width: 10%; float: left">
-                            <button type="button">></button>
-                            <button type="button"><</button>
-                        </div>
-
-                        <div class="container" style="width: 40%; height: 100%; float: left;">
-                            <p>Data Columns </p>
-                            <select class="form-control" multiple>
-                                <option>Mustard</option>
-                                <option>Ketchup</option>
-                                <option>Relish</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="container">
-                    <div class="jumbotron" id="datetimecolumn" style="height: 250px;">
-                        <p>Select DateTimeColumn </p>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="container" style="width: 100%; height: 100%;">
+                <div class="jumbotron" id="detectedcolumns" style="height: 250px;">
+                    <div class="container" style="width: 40%; height: 100%; float: left;">
+                        <p>Detected column names </p>
                         <select class="form-control" multiple>
-                            <option>LocalDateTime</option>
-                            <option>DataValue</option>
-                            <option>UTCOffset</option>
-                            <option>DateTimeUTC</option>
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
                         </select>
-                        <br>
-                        <button class="btn" onclick="contbutton(1);">Accept</button>
+                    </div>
 
+                    <div class="container" style="width: 10%; float: left">
+                        <button type="button">></button>
+                        <button type="button"><</button>
+                    </div>
+
+                    <div class="container" style="width: 40%; height: 100%; float: left;">
+                        <p>Data Columns </p>
+                        <select class="form-control" multiple>
+                            <option>Mustard</option>
+                            <option>Ketchup</option>
+                            <option>Relish</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="col-sm-3">
+            <div class="container">
+                <div class="jumbotron" id="datetimecolumn" style="height: 250px;">
+                    <p>Select DateTimeColumn </p>
+                    <select class="form-control" multiple>
+                        <option>LocalDateTime</option>
+                        <option>DataValue</option>
+                        <option>UTCOffset</option>
+                        <option>DateTimeUTC</option>
+                    </select>
+                    <br>
+                    <button class="btn" onclick="contbutton(1);">Accept</button>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="container">
-                    <div class="jumbotron inactive continuebutton" id="continuebutton1" onclick="switchtab(2)" style="float: right;">
-                        <h3 id="test">Continue</h3>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="container">
+                <div class="jumbotron inactive continuebutton" id="continuebutton1" onclick="switchtab(2)" style="float: right;">
+                    <h3 id="test">Continue</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -315,7 +315,7 @@
 
 
 <!--CONFIGURE TAB START-->
-    <!--Srollable data table-->
+<!--Srollable data table-->
 <div class="container hidden" id="tab-container2">
 
     <div class="row">
@@ -380,142 +380,142 @@
 <!--RUN TESTS TAB END-->
 
 
-    <!--REVIEW TAB START-->
-    <div class="container hidden" id="tab-container4">
-        <div id="outland">
-            <div id="graphholder">
-                <div id="graphbox">
-                    <div id="header">
-                        <h1>DataValue1</h1>
-                    </div>
-                    <img src="chrome_2019-03-17_22-16-12.png" alt="graphpic">
+<!--REVIEW TAB START-->
+<div class="container hidden" id="tab-container4">
+    <div id="outland">
+        <div id="graphholder">
+            <div id="graphbox">
+                <div id="header">
+                    <h1>DataValue1</h1>
                 </div>
-
-                <div id="prior">
-                    <div id=priorbox>
-                        <button type="button" class="btn btn-success" id = "priordata" onclick=""><- Prior Data Column</button>
-                    </div>
-                </div>
-                <div id="next">
-                    <div id=nextbox>
-                        <button type="button" class="btn btn-success" id = "nextdata" onclick="switchtab(5)">Continue</button>
-                    </div>
-                </div>
+                <img src="chrome_2019-03-17_22-16-12.png" alt="graphpic">
             </div>
 
-            <div id="dataholder">
-                <div id="metadata">
-                    <h2>Graph Metadata</h2>
-                    <div id="metadatabox">
-                        <ul>
-                            <li><a>DateTime:</a></li>
-
-                            <li><a>Measurement:</a></li>
-
-                            <li><a>Flag Code:</a></li>
-
-                            <li><a>Flag Meaning:</a></li>
-
-                            <li><a>Date Flagged:</a></li>
-
-                        </ul>
-                    </div>
+            <div id="prior">
+                <div id=priorbox>
+                    <button type="button" class="btn btn-success" id = "priordata" onclick=""><- Prior Data Column</button>
                 </div>
             </div>
+            <div id="next">
+                <div id=nextbox>
+                    <button type="button" class="btn btn-success" id = "nextdata" onclick="switchtab(5)">Continue</button>
+                </div>
+            </div>
+        </div>
 
-            <div id="dataholder2">
-                <div id="flaggeddata">
-                    <h2>Flagged Data</h2>
-                    <div id="flaggeddatabox">
-                        <table id="flaggeddatatable" class="table table-striped table-bordered tablesm" cellspacing="0" width="100%" id="datamodtable">
-                            <thead>
+        <div id="dataholder">
+            <div id="metadata">
+                <h2>Graph Metadata</h2>
+                <div id="metadatabox">
+                    <ul>
+                        <li><a>DateTime:</a></li>
 
-                                <tr>
-                                    <th>DateTime</th>
-                                    <th>Value</th>
-                                    <th>QC Flag</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td> data </td>
-                                <td> data </td>
-                                <td> data </td>
-                            </tr>
-                            <tr>
-                                <td> data </td>
-                                <td> data </td>
-                                <td> data </td>
-                            </tr>
-                            <tr>
-                                <td> data </td>
-                                <td> data </td>
-                                <td> data </td>
-                            </tr>
-                            <tr>
-                                <td> data </td>
-                                <td> data </td>
-                                <td> data </td>
-                            </tr>
-                            <tr>
-                                <td> data </td>
-                                <td> data </td>
-                                <td> data </td>
-                            </tr>
-                            <tr>
-                                <td> data </td>
-                                <td> data </td>
-                                <td> data </td>
-                            </tr>
-                            <tr>
-                                <td> data </td>
-                                <td> data </td>
-                                <td> data </td>
-                            </tr>
-                            <tr>
-                                <td> data </td>
-                                <td> data </td>
-                                <td> data </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                        <li><a>Measurement:</a></li>
+
+                        <li><a>Flag Code:</a></li>
+
+                        <li><a>Flag Meaning:</a></li>
+
+                        <li><a>Date Flagged:</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="dataholder2">
+            <div id="flaggeddata">
+                <h2>Flagged Data</h2>
+                <div id="flaggeddatabox">
+                    <table id="flaggeddatatable" class="table table-striped table-bordered tablesm" cellspacing="0" width="100%" id="datamodtable">
+                        <thead>
+
+                        <tr>
+                            <th>DateTime</th>
+                            <th>Value</th>
+                            <th>QC Flag</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td> data </td>
+                            <td> data </td>
+                            <td> data </td>
+                        </tr>
+                        <tr>
+                            <td> data </td>
+                            <td> data </td>
+                            <td> data </td>
+                        </tr>
+                        <tr>
+                            <td> data </td>
+                            <td> data </td>
+                            <td> data </td>
+                        </tr>
+                        <tr>
+                            <td> data </td>
+                            <td> data </td>
+                            <td> data </td>
+                        </tr>
+                        <tr>
+                            <td> data </td>
+                            <td> data </td>
+                            <td> data </td>
+                        </tr>
+                        <tr>
+                            <td> data </td>
+                            <td> data </td>
+                            <td> data </td>
+                        </tr>
+                        <tr>
+                            <td> data </td>
+                            <td> data </td>
+                            <td> data </td>
+                        </tr>
+                        <tr>
+                            <td> data </td>
+                            <td> data </td>
+                            <td> data </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-    <!--REVIEW TAB END-->
+</div>
+<!--REVIEW TAB END-->
 
-    <!--Hidden TAB START-->
-    <div class="container hidden" id="tab-container5">
+<!--Hidden TAB START-->
+<div class="container hidden" id="tab-container5">
 
-        <div class="row">
-            <div class="col-sm-12" id="words">
-                <h1>Thanks for using the CAOSHI HYDROQUALITY client.</h1>
-                <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
-                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
-                    Blah blah blah blah. Blabob Blah Bla Bla.
-                    Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
-                    Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
-                </p>
-            </div>
+    <div class="row">
+        <div class="col-sm-12" id="words">
+            <h1>Thanks for using the CAOSHI HYDROQUALITY client.</h1>
+            <p>Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+                Blah blah blah blah. Blabob Blah Bla Bla.
+                Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla.Blah blah blaaah. Blah blah blah blah.
+                Blabob Blah Bla Bla. Blah blah blaaah. Blah blah blah blah. Blabob Blah Bla Bla. Blah blah blaaah.
+            </p>
         </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-12" id="DownHold">
-                <button type="button" class="btn btn-success" id = "Down" onclick="">Download Quality Controlled Data</button>
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-sm-12" id="ContUp">
-                <button type="button" class="btn btn-success" id = "ContUp" onclick="">Continue Uploading with CAOSHI </button>
-            </div>
-        </div>
-        <br>
-
     </div>
-    <!--Hidden TAB END-->
+    <br>
+    <div class="row">
+        <div class="col-sm-12" id="DownHold">
+            <button type="button" class="btn btn-success" id = "Down" onclick="">Download Quality Controlled Data</button>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-12" id="ContUp">
+            <button type="button" class="btn btn-success" id = "ContUp" onclick="">Continue Uploading with CAOSHI </button>
+        </div>
+    </div>
+    <br>
+
+</div>
+<!--Hidden TAB END-->
 
 </body>
 
@@ -553,28 +553,28 @@
     <div class="jumbotron" id="filetable">
         <table class="table table-bordered" id="table">
             <thead>
-                <tr>
-                    <th>FILENAME</th>
-                    <th>FILETYPE </th>
-                    <th>SIZE</th>
-                </tr>
+            <tr>
+                <th>FILENAME</th>
+                <th>FILETYPE </th>
+                <th>SIZE</th>
+            </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Dry_Creek_010219</td>
-                    <td>.xlsx</td>
-                    <td>32MB</td>
-                </tr>
-                <tr>
-                    <td>Wet_Creek_3459</td>
-                    <td>.xlsx</td>
-                    <td>19MB</td>
-                </tr>
-                <tr>
-                    <td>23553010219</td>
-                    <td>.xlsx</td>
-                    <td>42MB</td>
-                </tr>
+            <tr>
+                <td>Dry_Creek_010219</td>
+                <td>.xlsx</td>
+                <td>32MB</td>
+            </tr>
+            <tr>
+                <td>Wet_Creek_3459</td>
+                <td>.xlsx</td>
+                <td>19MB</td>
+            </tr>
+            <tr>
+                <td>23553010219</td>
+                <td>.xlsx</td>
+                <td>42MB</td>
+            </tr>
             </tbody>
         </table>
     </div>

@@ -1,7 +1,8 @@
 //TEST
-var upper = 0;
-var lower = 0;
-var testField ="";
+var upper = 6;
+var lower = 5;
+var testField ="Temperature";
+
 function previewcsv() {
     window.location = "/upload2"
 }
@@ -59,13 +60,12 @@ function RunTests() {
     function frame() {
         if (width >= 100) {
             clearInterval(id);
-            switchtab(4)
+            movepage('review');
         } else {
             width++;
             pBar.style.width = width + '%';
             pBar.innerHTML = width * 1  + '%';
         }
-
     }
 }
 
@@ -161,13 +161,16 @@ function SetThresh() {
 
     var $coldata = $('#configdata');
     var selectedItems = $coldata.val() || [];
-    alert(selectedItems[0]);
+
     testField = selectedItems[0];
     lower = $('#LowThresh').val();
     upper = $('#UpThresh').val();
 
     var item = "<option value=\"Test" + num + "\">Test " + num + " " + testField + "</option>";
     $test.append(item);
+
+    alert('api/thresh/' + testField+'/'+ upper+'/'+ lower);
+    movepage('api/thresh/' + testField+'/'+ upper+'/'+ lower);
 }
 
 function threshSelect() {
