@@ -102,10 +102,8 @@ def settest(col, low, high):
 @app.route('/api/save', methods=['POST'])
 def process_csv():
 	input_values = request.form
-	result_str = 'First Name:' + request.form['first_name'] + '\n' + \
-				 'Last Name:' + request.form['last_name'] + '\n' + \
-				 'Email:' + request.form['email']
-	# print(result_str)
+	result_str = 'Lowest Value: ' + request.form['Lowest_Value'] + '\n' + \
+				 'Highest Value:' + request.form['highest_value']
 	text_file = open(app.config['META_FILE'], "w")
 	text_file.write(result_str)
 	text_file.close()
