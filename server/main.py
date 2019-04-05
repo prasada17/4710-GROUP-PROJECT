@@ -1,8 +1,9 @@
-import pandas as pd
+
 import os
 from flask import Flask, request, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
 import util
+import json
 
 # get current app directory
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -62,13 +63,11 @@ def verify():
 	column_names, data_part = util.preview_csv(app.config['_FILE'], 100)
 	return render_template('verify.html', column_names=column_names, data_part=data_part, filename=app.config['filename'])
 
-
 @app.route('/config')
 def config():
 	data_col_names = app.config['_DATA_COLS'].split(' ')
 	print(data_col_names)
 	return render_template('configure.html', data_col_names=data_col_names)
-
 
 @app.route('/api/datacol/<colname>')
 def apidata(colname):
@@ -87,6 +86,7 @@ def apidate(colname):
 @app.route('/runtests')
 def runtests():
 	return render_template('runtests.html')
+
 
 @app.route('/review')
 def review():
@@ -108,22 +108,18 @@ def settest(col, high, low):
 	return render_template('runtests.html')
 
 
-if __name__ == '__main__':
-	app.debug = True
-	ip = '127.0.0.1'
-	app.run(host=ip)
-
-
 @app.route('/api/save', methods=['POST'])
 def process_csv():
 	input_values = request.form
-	result_str = 'First Name:' + request.form['first_name'] + '\n' + \
-				 'Last Name:' + request.form['last_name'] + '\n' + \
-				 'Email:' + request.form['email']
-	# print(result_str)
+	result_str = 'Lowest Value: ' + request.form['Lowest_Value'] + '\n' + \
+				 'Highest Value:' + request.form['highest_value']
 	text_file = open(app.config['META_FILE'], "w")
 	text_file.write(result_str)
 	text_file.close()
-	return render_template('success.html')
 
+	return ('', 204)
 
+if __name__ == '__main__':
+    app.debug = True
+    ip = '127.0.0.1'
+    app.run(host=ip)

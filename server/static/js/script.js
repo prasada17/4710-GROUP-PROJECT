@@ -21,6 +21,7 @@ function switchtab(number) {
             element.classList.remove("active");
         }
     }
+
 }
 
 function loading() {
@@ -177,3 +178,4 @@ function threshSelect() {
     $('#selectedTest').html('THRESHHOLD TEST SELECTED');
     document.getElementById("thresh").classList.remove("hidden");
 }
+
