@@ -121,4 +121,5 @@ function checkdata() {
 function updateDataFieldInfo() {
     let $fields = $('#configdata').val() || [];
     let $field = $fields[0];
+    $('#exampleModalLabel').text($field);
 }
