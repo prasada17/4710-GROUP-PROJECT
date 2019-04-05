@@ -40,8 +40,8 @@
             </div>
             <div class="col-sm-6">
                 <h4 id="test">QC Tests</h4>
-                <div class="jumbotron" style="background-color: white; height: 200px;">
-                </div>
+                <select id="TestSelector" multiple class="form-control selectBox">
+                </select>
                 <div style="text-align: center;">
                     <button class="btn" style="width: 30%" data-toggle="modal" data-target="#testadd">Add Test</button>
                     <button class="btn" style="width: 30%">Modify Test</button>
@@ -130,12 +130,12 @@
       <div class="col-sm-6 hidden" id="thresh">
       <form>
           <div class="form-group">
-            <label for="exampleFormControlInput1">Upper Threshold</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Input an integer">
+            <label for="LowThresh">Upper Threshold</label>
+            <input type="number" class="form-control" id="LowThresh" placeholder="Input an integer">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlInput1">Lower Threshold</label>
-            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Input an integer">
+            <label for="UpThresh">Lower Threshold</label>
+            <input type="number" class="form-control" id="UpThresh" placeholder="Input an integer">
         </div>
         </form>
     </div>
@@ -143,7 +143,7 @@
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    <button type="button" class="btn btn-primary" onclick="contbutton(2)">Save changes</button>
+    <button type="button" class="btn btn-primary" onclick="contbutton(2); SetThresh();">Save changes</button>
 </div>
 </div>
 </div>

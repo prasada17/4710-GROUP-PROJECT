@@ -60,11 +60,13 @@ def verify():
 	column_names, data_part = util.preview_csv(app.config['_FILE'], 100)
 	return render_template('verify.html', column_names=column_names, data_part=data_part, filename=app.config['filename'])
 
+
 @app.route('/config')
 def config():
 	data_col_names = app.config['_DATA_COLS'].split(' ')
 	print(data_col_names)
 	return render_template('configure.html', data_col_names=data_col_names)
+
 
 @app.route('/api/datacol/<colname>')
 def apidata(colname):
@@ -72,19 +74,23 @@ def apidata(colname):
 	print(app.config['_DATA_COLS'])
 	return ('', 204)
 
+
 @app.route('/api/date/<colname>')
 def apidate(colname):
 	app.config['_DATE_COL'] = colname 
 	print(app.config['_DATE_COL'])
 	return ('', 204)
 
+
 @app.route('/runtests')
 def runtests():
     return render_template('runtests.html')
 
+
 @app.route('/review')
 def review():
     return render_template('review.html')
+
 
 @app.route('/done')
 def done():
@@ -95,6 +101,7 @@ if __name__ == '__main__':
     app.debug = True
     ip = '127.0.0.1'
     app.run(host=ip)
+
 
 @app.route('/api/save', methods=['POST'])
 def process_csv():

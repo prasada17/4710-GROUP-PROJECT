@@ -1,5 +1,7 @@
 //TEST
-
+var upper = 0;
+var lower = 0;
+var testField ="";
 function previewcsv() {
     window.location = "/upload2"
 }
@@ -150,6 +152,22 @@ function modDataFieldInfo() {
 function newli(string) {
     let text = '<li class="list-group-item">' + string + '</li>';
     return text;
+}
+
+function SetThresh() {
+    var $test = $('#TestSelector');
+    var num = $test.children().length;
+    num++;
+
+    var $coldata = $('#configdata');
+    var selectedItems = $coldata.val() || [];
+    alert(selectedItems[0]);
+    testField = selectedItems[0];
+    lower = $('#LowThresh').val();
+    upper = $('#UpThresh').val();
+
+    var item = "<option value=\"Test" + num + "\">Test " + num + " " + testField + "</option>";
+    $test.append(item);
 }
 
 function threshSelect() {
