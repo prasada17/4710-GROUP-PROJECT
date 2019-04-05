@@ -151,3 +151,8 @@ function newli(string) {
     let text = '<li class="list-group-item">' + string + '</li>';
     return text;
 }
+
+function threshSelect() {
+    $('#selectedTest').html('THRESHHOLD TEST SELECTED');
+    document.getElementById("thresh").classList.remove("hidden");
+}
