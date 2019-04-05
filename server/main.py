@@ -96,6 +96,13 @@ def review():
 def done():
     return render_template('done.html')
 
+@app.route('/api/thresh/<col>/<low>/<high>')
+def settest(col, low, high):
+
+	results = threshold_process_method(app.config['filename'], col, low, high)
+
+	return render_template('review', outlier=something)
+
 
 if __name__ == '__main__':
     app.debug = True
