@@ -1,5 +1,7 @@
 //TEST
-
+var upper = 0;
+var lower = 0;
+var testField ="";
 function previewcsv() {
     window.location = "/upload2"
 }
@@ -18,6 +20,7 @@ function switchtab(number) {
             element.classList.remove("active");
         }
     }
+
 }
 
 function loading() {
@@ -152,7 +155,24 @@ function newli(string) {
     return text;
 }
 
+function SetThresh() {
+    var $test = $('#TestSelector');
+    var num = $test.children().length;
+    num++;
+
+    var $coldata = $('#configdata');
+    var selectedItems = $coldata.val() || [];
+    alert(selectedItems[0]);
+    testField = selectedItems[0];
+    lower = $('#LowThresh').val();
+    upper = $('#UpThresh').val();
+
+    var item = "<option value=\"Test" + num + "\">Test " + num + " " + testField + "</option>";
+    $test.append(item);
+}
+
 function threshSelect() {
     $('#selectedTest').html('THRESHHOLD TEST SELECTED');
     document.getElementById("thresh").classList.remove("hidden");
 }
+

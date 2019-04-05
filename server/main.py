@@ -4,6 +4,7 @@ import time
 from flask import Flask, request, render_template, redirect, url_for
 from werkzeug.utils import secure_filename
 import util
+import json
 
 # get current app directory
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -91,8 +92,20 @@ def done():
     return render_template('done.html')
 
 
+@app.route('/api/save', methods=['POST'])
+def process_csv():
+	input_values = request.form
+	result_str = 'First Name:' + request.form['first_name'] + '\n' + \
+				 'Last Name:' + request.form['last_name'] + '\n' + \
+				 'Email:' + request.form['email']
+	# print(result_str)
+	text_file = open(app.config['META_FILE'], "w")
+	text_file.write(result_str)
+	text_file.close()
+
+	return ('', 204)
+
 if __name__ == '__main__':
     app.debug = True
     ip = '127.0.0.1'
     app.run(host=ip)
-
