@@ -25,7 +25,7 @@
                 <h4 id="test">Data Field Information</h4>
 
 
-                    <ul class="list-group" style="width: 200px;">
+                    <ul class="list-group" style="width: 200px;" id=datafield>
                         <li class="list-group-item">Cras justo odio</li>
                         <li class="list-group-item">Dapibus ac facilisis in</li>
                         <li class="list-group-item">Morbi leo risus</li>
@@ -34,29 +34,6 @@
                     </ul>
 
                 <button class="btn" style="width: 100%" data-toggle="modal" data-target="#metamodal">Modify Information</button>
-                    <!-- Modal -->
-                        <div class="modal fade" id="metamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">New Test</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-
-
-                              </div>
-                              <div class="modal-footer">
-
-                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--End Modal -->
 
             </div>
             <div class="col-sm-6">
@@ -65,37 +42,7 @@
                 </div>
                 <div style="text-align: center;">
                     <button class="btn" style="width: 30%" data-toggle="modal" data-target="#testadd">Add Test</button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="testadd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Data</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="dropdown">
-                                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Select Test
-                                      </button>
-                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">Test 1</a>
-                                        <a class="dropdown-item" href="#">Test 2</a>
-                                        <a class="dropdown-item" href="#">Test 3</a>
-                                      </div>
-                                </div>
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">Add Additional data</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!--End Modal -->
+                        
                     <button class="btn" style="width: 30%">Modify Test</button>
                     <button class="btn" style="width: 30%" onclick="contbutton(2)">Remove Test</button>
                 </div>
@@ -117,5 +64,53 @@
 <!--CONFIGURE TAB END-->
 
 <a href="/runtests">TEST</a>
+<script>
+    $( "#configdata" ).change(function() {
+      alert( "Handler for .change() called." );
+    });
+</script>
 
+ <!-- Modal -->
+<div class="modal fade" id="metamodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Test</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="testadd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End Modal -->
 {% endblock %}
